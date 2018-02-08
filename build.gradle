@@ -1,0 +1,51 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+
+ext {
+    minSdkVersion = 16
+    targetSdkVersion = 23
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+
+    // library versions
+    supportLibraryVersion = '27.0.2'
+    playServicesVersion = '11.4.0'
+    supportTestVersion = '1.0.1'
+    espressoTestVersion = '3.0.1'
+    jUnitVersion = '4.12'
+    mockitoVersion = '2.8.47'
+    powerMockVersion = '1.6.6'
+    leakCanaryVersion = '1.5.4'
+    robolectricVersion = '3.5.1'
+    imaSdkVersion = '3.7.4'
+    dagger2Version = '2.14.1'
+    gsonVersion = '2.8.0'
+    constraintLayoutVersion = '1.0.2'
+
+}
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0-alpha01'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
